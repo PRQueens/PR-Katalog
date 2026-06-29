@@ -11,157 +11,117 @@
 
 <header class="topbar">
   <div class="brand">🚔 Pusha RP</div>
-  <nav>
-    <a href="index.html">Start</a>
-    <a class="active" href="bannkatalog.html">Bannkatalog</a>
+
+  <input id="search" placeholder="🔍 Suche im Bannkatalog..." />
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav id="mobileMenu">
+    <a href="#grundsatz">Grundsatz</a>
+    <a href="#leicht">Leicht</a>
+    <a href="#mittel">Mittel</a>
+    <a href="#schwer">Schwer</a>
+    <a href="#perm">Perm</a>
   </nav>
 </header>
 
 <div class="layout">
 
 <aside class="sidebar">
-  <div class="sidebar-title">Dokumentation</div>
-  <a href="#grundsatz">Grundsatz</a>
-  <a href="#leicht">Leichte Verstöße</a>
-  <a href="#mittel">Mittlere Verstöße</a>
-  <a href="#schwer">Schwere Verstöße</a>
-  <a href="#perm">Permanent Bann</a>
-  <a href="#voice">Voice Regeln</a>
-  <a href="#safezone">Safezones</a>
-  <a href="#wirtschaft">Wirtschaft</a>
-  <a href="#support">Support</a>
-  <a href="#strabanpassung">Strafanpassung</a>
+  <a href="#grundsatz">📌 Grundsatz</a>
+  <a href="#leicht">🟡 Leichte Verstöße</a>
+  <a href="#mittel">🟠 Mittlere Verstöße</a>
+  <a href="#schwer">🔴 Schwere Verstöße</a>
+  <a href="#perm">🚫 Permanent Bann</a>
+  <a href="#voice">🎤 Voice</a>
+  <a href="#safe">🚓 Safezone</a>
+  <a href="#eco">💰 Wirtschaft</a>
+  <a href="#support">🧠 Support</a>
 </aside>
 
 <main class="content">
 
 <h1>📖 Bannkatalog</h1>
-<p class="subtitle">Teaminternes Regelwerk für Sanktionen</p>
 
 <section id="grundsatz" class="card">
-<h2>§1 Grundsatz</h2>
-<p>
-Alle Entscheidungen erfolgen nach Team-Ermessen.
-Strafen orientieren sich an <b>Schwere, Vorsatz und Vorgeschichte</b>.
-Jede Sanktion muss durch <b>Beweise (Clip, Logs, Screenshot)</b> nachvollziehbar sein.
-Bei mehreren Verstößen gilt die höchste oder kombinierte Strafe.
-</p>
+<h2>Grundsatz</h2>
+<p>Alle Entscheidungen basieren auf Ermessen, Beweisen und Vorgeschichte.</p>
 </section>
 
 <section id="leicht">
-<h2>🟡 §2 Leichte Verstöße</h2>
-<table>
-<tr><th>Verstoß</th><th>1. Mal</th><th>2. Mal</th><th>3. Mal</th></tr>
-
-<tr><td>OOC im IC-Chat</td><td>Verwarnung</td><td>6h</td><td>1 Tag</td></tr>
-<tr><td>Leichtes FailRP</td><td>Verwarnung</td><td>12h</td><td>2 Tage</td></tr>
-<tr><td>Trolling</td><td>Verwarnung</td><td>1 Tag</td><td>3 Tage</td></tr>
-<tr><td>AFK im Support</td><td>Verwarnung</td><td>12h</td><td>2 Tage</td></tr>
-<tr><td>Voice Spam</td><td>Kick</td><td>12h</td><td>2 Tage</td></tr>
-<tr><td>Leichte Beleidigungen</td><td>Verwarnung</td><td>1 Tag</td><td>3 Tage</td></tr>
+<h2>🟡 Leichte Verstöße</h2>
+<table class="filterable">
+<tr><th>Verstoß</th><th>Strafe</th></tr>
+<tr><td>OOC im IC</td><td>Verwarnung → 6h → 1 Tag</td></tr>
+<tr><td>FailRP</td><td>Verwarnung → 12h → 2 Tage</td></tr>
+<tr><td>Trolling</td><td>Verwarnung → 1–3 Tage</td></tr>
+<tr><td>Voice Spam</td><td>Kick → 12h → 2 Tage</td></tr>
+<tr><td>Beleidigungen</td><td>Verwarnung → 1–3 Tage</td></tr>
 </table>
 </section>
 
 <section id="mittel">
-<h2>🟠 §3 Mittlere Verstöße</h2>
-<table>
-<tr><th>Verstoß</th><th>1. Mal</th><th>2. Mal</th><th>3. Mal</th></tr>
-
-<tr><td>FailRP</td><td>1 Tag</td><td>3 Tage</td><td>7 Tage</td></tr>
-<tr><td>Cop-Baiting</td><td>1 Tag</td><td>3 Tage</td><td>7 Tage</td></tr>
-<tr><td>Combat Logging</td><td>3 Tage</td><td>7 Tage</td><td>14 Tage</td></tr>
-<tr><td>Unrealistisches Verhalten</td><td>Verwarnung</td><td>1 Tag</td><td>3 Tage</td></tr>
-<tr><td>NLR Missachtung</td><td>3 Tage</td><td>7 Tage</td><td>14 Tage</td></tr>
-<tr><td>PowerRP</td><td>3 Tage</td><td>7 Tage</td><td>14 Tage</td></tr>
-<tr><td>Metagaming</td><td>3 Tage</td><td>7 Tage</td><td>30 Tage</td></tr>
+<h2>🟠 Mittlere Verstöße</h2>
+<table class="filterable">
+<tr><th>Verstoß</th><th>Strafe</th></tr>
+<tr><td>Copbaiting</td><td>1–7 Tage</td></tr>
+<tr><td>Combat Logging</td><td>3–14 Tage</td></tr>
+<tr><td>PowerRP</td><td>3–14 Tage</td></tr>
+<tr><td>Metagaming</td><td>3–30 Tage</td></tr>
+<tr><td>NLR</td><td>3–14 Tage</td></tr>
 </table>
 </section>
 
 <section id="schwer">
-<h2>🔴 §4 Schwere Verstöße</h2>
-<table>
+<h2>🔴 Schwere Verstöße</h2>
+<table class="filterable">
 <tr><th>Verstoß</th><th>Strafe</th></tr>
-
 <tr><td>RDM</td><td>7–14 Tage</td></tr>
 <tr><td>VDM</td><td>7–14 Tage</td></tr>
-<tr><td>Massives FailRP</td><td>7–30 Tage</td></tr>
-<tr><td>Combat Storing</td><td>7 Tage</td></tr>
-<tr><td>Bug Abuse</td><td>14–30 Tage</td></tr>
+<tr><td>Safezone Abuse</td><td>7–14 Tage</td></tr>
 <tr><td>Streamsniping</td><td>30 Tage</td></tr>
-<tr><td>Schwere Beleidigungen</td><td>14–30 Tage</td></tr>
-<tr><td>Diskriminierung</td><td>30 Tage – Permanent</td></tr>
-<tr><td>Drohungen außerhalb RP</td><td>30 Tage – Permanent</td></tr>
+<tr><td>Diskriminierung</td><td>14–30 Tage</td></tr>
 </table>
 </section>
 
 <section id="perm" class="card danger">
-<h2>🚫 §5 Permanent Bann (Zero Tolerance)</h2>
-
-Cheating / Hacks / Mod-Menüs / Executor<br>
-Trigger & Event Abuse<br>
-Duping / Exploits<br>
-Echtgeldhandel (RMT)<br>
-Ban Evasion / Account Sharing<br>
-Doxxing / Datenleaks<br>
-DDOS / Serverangriffe<br>
-Server-Sabotage<br>
-Rassismus / Extremismus<br>
-Team-Impersonation<br>
-Wiederholte schwere Verstöße
+<h2>🚫 Permanent Bann</h2>
+Cheating · Exploits · Duping · RMT · Ban Evasion · Doxxing · DDOS · Server Sabotage · Extremismus
 </section>
 
-<section id="voice">
+<section id="voice" class="card">
 <h2>🎤 Voice Regeln</h2>
-<div class="card">
-Soundboard Abuse → Verwarnung bis 1 Tag<br>
-Voice Changer Trolling → 1–3 Tage<br>
-Earrape → 3 Tage<br>
-Toxic Voice → 3–14 Tage
-</div>
+Soundboard Abuse → Kick bis 1 Tag<br>
+Voice Troll → 1–3 Tage<br>
+Earrape → 3 Tage
 </section>
 
-<section id="safezone">
+<section id="safe" class="card">
 <h2>🚓 Safezones</h2>
-<div class="card">
-Waffen ziehen → 3 Tage<br>
+Waffen → 3 Tage<br>
 Schießen → 7 Tage<br>
-Fahrzeug-Angriffe → 3 Tage<br>
-Safezone Abuse → 7–14 Tage
-</div>
+Rammen → 3 Tage
 </section>
 
-<section id="wirtschaft">
+<section id="eco" class="card">
 <h2>💰 Wirtschaft</h2>
-<div class="card">
-Money Abuse → 14 Tage<br>
-Item Duping → Permanent<br>
-Exploit Abuse → Permanent<br>
-Echtgeldhandel → Permanent
-</div>
+Duping → Perm<br>
+Exploit → Perm<br>
+RMT → Perm
 </section>
 
-<section id="support">
+<section id="support" class="card">
 <h2>🧠 Support</h2>
-<div class="card">
-Support verlassen → 12h<br>
-Team belügen → 7 Tage<br>
+Lügen → 7 Tage<br>
 Beweise fälschen → 30 Tage<br>
-Team beleidigen → 7–30 Tage
-</div>
-</section>
-
-<section id="strabanpassung" class="card">
-<h2>⚖️ Strafanpassung</h2>
-
-<b>Erhöhung:</b> Vorsatz, Wiederholung, mehrere Verstöße, Lügen, Beweisvernichtung<br><br>
-
-<b>Milderung:</b> Erstverstoß, Einsicht, Kooperation, geringe Auswirkungen<br><br>
-
-Das Team entscheidet stets objektiv im Sinne eines fairen Roleplays.
+Teambeleidigung → 7–30 Tage
 </section>
 
 </main>
 </div>
+
+<!-- 🔥 HIER IST DAS SCRIPT RICHTIG EINGEBUNDEN -->
+<script src="script.js"></script>
 
 </body>
 </html>
